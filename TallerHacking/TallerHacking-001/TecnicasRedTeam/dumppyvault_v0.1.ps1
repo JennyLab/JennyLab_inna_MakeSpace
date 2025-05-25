@@ -1,11 +1,77 @@
 <#
 .SYNOPSIS
-< help content>
+Herramienta para volcar credenciales del vault sistema a través de PowerShell.
 
 .DESCRIPTION
+Este script permite enumerar, añadir, eliminar, mostrar y probar credenciales almacenadas en el sistema utilizando funciones avanzadas de P/Invoke sobre la API de Windows. Es útil para técnicas de Red Team, auditorías de seguridad y administración avanzada de credenciales.
+
+.PARAMETER AddCrd
+Añade una nueva credencial al almacén.
+
+.PARAMETER DelCrd
+Elimina una credencial específica del almacén.
+
+.PARAMETER GetCrd
+Obtiene una credencial específica del almacén.
+
+.PARAMETER ShoCrd
+Muestra todas las credenciales almacenadas.
+
+.PARAMETER RunTst
+Ejecuta pruebas sobre las credenciales.
+
+.PARAMETER Tgt
+Nombre del objetivo o target para la operación sobre credenciales.
+
+.PARAMETER Usr
+Nombre de usuario asociado a la credencial.
+
+.PARAMETER Psw
+Contraseña o secreto de la credencial.
+
+.PARAMETER Cmt
+Comentario o descripción para la credencial.
+
+.PARAMETER All
+Realiza la operación seleccionada sobre todas las credenciales.
+
+.PARAMETER CrdTyp
+Tipo de credencial. Valores permitidos: GENERIC, DOMAIN_PASSWORD, DOMAIN_CERTIFICATE, DOMAIN_VISIBLE_PASSWORD, GENERIC_CERTIFICATE, DOMAIN_EXTENDED, MAXIMUM, MAXIMUM_EX. Por defecto: GENERIC.
+
+.PARAMETER CrdPrst
+Tipo de persistencia de la credencial. Valores permitidos: SESSION, LOCAL_MACHINE, ENTERPRISE. Por defecto: ENTERPRISE.
+
+.EXAMPLE
+.\dumppyvault_v0.1.ps1 -ShoCrd
+Enumera y muestra todas las credenciales almacenadas en el sistema.
+
+.EXAMPLE
+.\dumppyvault_v0.1.ps1 -AddCrd -Tgt "MyApp" -Usr "admin" -Psw "P@ssw0rd" -Cmt "Credencial de prueba"
+Añade una nueva credencial para MyApp.
+
+.EXAMPLE
+.\dumppyvault_v0.1.ps1 -DelCrd -Tgt "MyApp"
+Elimina la credencial con target "MyApp".
+
+.EXAMPLE
+.\dumppyvault_v0.1.ps1 -GetCrd -Tgt "MyApp"
+Obtiene y muestra los detalles de la credencial para "MyApp".
+
+.NOTES
+Autor: Alberto García de Dios (@h0ffy // JennyLab)
+Para: MakeSpace (Taller Hacking 0x001: Primer Codigo RedTeaming) 
+Version: 0.1
+Repositorio: https://github.com/JennyLab/JennyLab_inna_MakeSpace
+Fecha: 2024-05-25
+Urls: - https://www.jennylab.net
+      - https://makespacemadrid.org/
+
+
+.LINK
+https://github.com/JennyLab/JennyLab_inna_MakeSpace
+
 
 #>
-
 
 
 
