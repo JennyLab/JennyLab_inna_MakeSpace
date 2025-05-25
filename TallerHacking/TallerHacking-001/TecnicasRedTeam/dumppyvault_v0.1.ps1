@@ -66,6 +66,9 @@ Fecha: 2024-05-25
 Urls: - https://www.jennylab.net
       - https://makespacemadrid.org/
 
+.LICENSE
+Public Domain JennyLab @2025
+
 
 .LINK
 https://github.com/JennyLab/JennyLab_inna_MakeSpace
